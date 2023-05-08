@@ -1,0 +1,32 @@
+.QR__Box {
+    background: #5f54c1;
+    color: white;
+
+    height: 80vh;
+    width: 25%;
+
+    margin-top: 5%;
+    margin-right: 5%;
+
+    border-radius: 40px;
+
+    justify-content: center;
+    align-items: center;
+
+    display: flex;
+
+    float: right;
+
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.QR__Code {
+    width: 150px;
+    height: 150px;
+
+    margin: auto;
+
+    border-radius: 15px;
+
+    background: white;
+}
