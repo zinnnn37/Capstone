@@ -1,0 +1,120 @@
+body {
+    background: #f0f0f0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background: #5f54c1;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.FormContainer {
+    width: 500px;
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    display: flex;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+.FormBack {
+    width: 80%;
+    height: 70%;
+
+    margin-top: auto;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #7e77ca;
+
+    border: 2px solid #ffffff;
+    border-radius: 40px;
+
+    //box-shadow: 5px 5px 5px lightgray;
+}
+
+.FormTitle {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+}
+
+.FormHr {
+    color: white;
+    width: 90%;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.InputContainer {
+    width: 70%;
+    height: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.Form {
+    width: 80%;
+    height: 80%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+
+    align-items: center;
+    input {
+        background: #a5a1d7;
+        border: 1px solid #ffffff;
+        font-size: 1.5em;
+        color: white;
+
+        width: 93%;
+        height: 17%;
+
+        margin-bottom: 10%;
+        padding-left: 0.5em;
+
+        border-radius: 7px;
+    }
+}
+
+.InputIdx {
+    color: white;
+    font-size: 1.5em;
+
+    margin-left: 5%;
+    margin-bottom: 6%;
+
+    font-weight: normal;
+}
+
+.Submit {
+    width: 80%;
+    height: 7%;
+
+    margin-bottom: auto;
+
+    background: #a5a1d7;
+    border: 2px solid #ffffff;
+    border-radius: 20px;
+
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+}

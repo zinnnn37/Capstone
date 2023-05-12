@@ -1,13 +1,14 @@
-import List from './components/List'
-import QR from './components/QR'
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Form from "./pages/Form";
 
 const App = () => {
     return (
-        <div>
-            <List></List>
-            <QR></QR>
-        </div>
-    )
-}
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/form" element={<Form />} />
+        </Routes>
+    );
+};
 
-export default App
+export default App;
