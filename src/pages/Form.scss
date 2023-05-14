@@ -1,3 +1,5 @@
+@import "~react-datepicker/dist/react-datepicker.css";
+
 body {
     background: #f0f0f0;
 }
@@ -27,7 +29,7 @@ body {
 }
 
 .FormBack {
-    width: 80%;
+    width: 70%;
     height: 70%;
 
     margin-top: auto;
@@ -45,8 +47,11 @@ body {
 
 .FormTitle {
     color: white;
-    font-size: 2.5em;
+    font-size: 2em;
     font-weight: bold;
+
+    padding-top: 15%;
+
     text-align: center;
     justify-content: center;
 }
@@ -55,7 +60,7 @@ body {
     color: white;
     width: 90%;
     margin-top: 5%;
-    margin-bottom: 15%;
+    margin-bottom: auto;
 }
 
 .InputContainer {
@@ -96,16 +101,16 @@ body {
 
 .InputIdx {
     color: white;
-    font-size: 1.5em;
+    font-size: 1.25em;
 
     margin-left: 5%;
-    margin-bottom: 6%;
+    margin-bottom: 5%;
 
     font-weight: normal;
 }
 
 .Submit {
-    width: 80%;
+    width: 70%;
     height: 7%;
 
     margin-bottom: auto;
@@ -117,4 +122,40 @@ body {
     color: white;
     font-size: 1.2em;
     font-weight: bold;
+}
+
+.react-datepicker {
+    font-size: 1.2em;
+    // 좌표 살짝 이동
+}
+.react-datepicker__header {
+    padding-top: 1em;
+}
+//.react-datepicker__month {
+//    margin: 0.4em 1em;
+//}
+.react-datepicker__day-name,
+.react-datepicker__day {
+    width: 1.7em;
+    line-height: 1.7em;
+    //margin: 0.166em;
+}
+.react-datepicker__current-month {
+    font-size: 1em;
+    padding-bottom: 0.4em;
+}
+//.react-datepicker__navigation {
+//    top: 1em;
+//    line-height: 1.7em;
+//    border: 0.45em solid transparent;
+//}
+.react-datepicker__navigation--previous {
+    margin-top: 0.7em;
+    border-right-color: #ccc;
+    left: 1em;
+}
+.react-datepicker__navigation--next {
+    margin-top: 0.7em;
+    border-left-color: #ccc;
+    right: 1em;
 }
