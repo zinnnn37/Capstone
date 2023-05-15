@@ -86,22 +86,27 @@ body {
     input {
         background: #a5a1d7;
         border: 1px solid #ffffff;
-        font-size: 1.5em;
+        font-size: 1.3em;
         color: white;
 
-        width: 93%;
-        height: 17%;
+        width: 90%;
 
         margin-bottom: 10%;
-        padding-left: 0.5em;
+        padding-left: 0.7em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
 
         border-radius: 7px;
+    }
+    input::placeholder {
+        font-size: 1em;
+        color: #cdcbe7;
     }
 }
 
 .InputIdx {
     color: white;
-    font-size: 1.25em;
+    font-size: 1.5em;
 
     margin-left: 5%;
     margin-bottom: 5%;
@@ -120,7 +125,7 @@ body {
     border-radius: 20px;
 
     color: white;
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
 }
 

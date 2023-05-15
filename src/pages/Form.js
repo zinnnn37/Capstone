@@ -20,17 +20,18 @@ const Form = () => {
                         <h1 className="FormTitle">정보 입력</h1>
                         <hr className="FormHr"></hr>
                         <div className="InputContainer">
-                            <h3 className="InputIdx">이름</h3>
-                            <input
-                                className="Input"
-                                type="text"
-                                //value={name}
-                            ></input>
                             <h3 className="InputIdx">ID</h3>
                             <input
                                 className="Input"
                                 type="text"
                                 //value={id}
+                            ></input>
+                            <h3 className="InputIdx">휴대전화</h3>
+                            <input
+                                placeholder="'-' 없이 입력"
+                                className="Input"
+                                type="text"
+                                //value={phone}
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
                             <DatePicker
