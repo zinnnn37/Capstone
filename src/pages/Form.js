@@ -17,6 +17,12 @@ import "./Form.scss";
 const Form = () => {
     const { register, handleSubmit, control } = useForm();
 
+    //const onSubmit = (event) => {
+    //    // 폼 전송 핸들러
+    //    event.preventDefault();
+    //    alert("전송 완료");
+    //};
+
     return (
         <div className="background">
             <div className="FormContainer">
