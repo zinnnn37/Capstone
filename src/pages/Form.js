@@ -12,7 +12,11 @@ import "./Form.scss";
 
 const Form = () => {
     const [startDate, setStartDate] = useState(new Date());
-    const { register, handleSubmit } = useForm();
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm();
 
     return (
         <div className="background">
@@ -52,8 +56,10 @@ const Form = () => {
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
                             <DatePicker
+                                dateFormat="yyyy.MM.dd."
                                 selected={startDate}
                                 onChange={(date) => setStartDate(date)}
+                                maxDate={new Date()}
                                 //{...register("Date", { required: true })}
                             />
                         </div>
