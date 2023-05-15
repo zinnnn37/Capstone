@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import DatePicker from "react-datepicker";
+import { useForm, Controller } from "react-hook-form";
+import ReactDatePicker from "react-datepicker";
 import "./Form.scss";
 
 //interface IForm {
@@ -10,13 +10,12 @@ import "./Form.scss";
 //    phone: string;
 //}
 
+//type FormValues = {
+//    ReactDatepicker: string,
+//};
+
 const Form = () => {
-    const [startDate, setStartDate] = useState(new Date());
-    const {
-        register,
-        handleSubmit,
-        formState: { errors },
-    } = useForm();
+    const { register, handleSubmit, control } = useForm();
 
     return (
         <div className="background">
@@ -55,12 +54,18 @@ const Form = () => {
                                 })}
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
-                            <DatePicker
-                                dateFormat="yyyy.MM.dd."
-                                selected={startDate}
-                                onChange={(date) => setStartDate(date)}
-                                maxDate={new Date()}
-                                //{...register("Date", { required: true })}
+                            <Controller
+                                control={control}
+                                name="date"
+                                render={({ field: { onChange, value } }) => (
+                                    <ReactDatePicker
+                                        onChange={onChange}
+                                        selected={value}
+                                        dateFormat="yyyy.MM.dd."
+                                        maxDate={new Date()}
+                                        placeholderText="공연 날짜 선택"
+                                    />
+                                )}
                             />
                         </div>
                     </form>
