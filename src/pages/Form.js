@@ -7,13 +7,26 @@ const Form = () => {
     const { register } = useForm();
     const [date, setStartDate] = useState(new Date());
 
+    const [data, setInputs] = useState({
+        id: "",
+        phone: "",
+        date: "",
+    });
+
+    const handleValue = (e) => {
+        const { id, value } = e.target;
+        setInputs({
+            ...data,
+            [id]: value,
+        });
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({
-            id: e.target.id.value,
-            phone: e.target.phone.value,
-            date: JSON.stringify(e.target.date.value),
-        });
+
+        data["date"] = e.target.date.value;
+        console.log(data);
+
         alert("제출되었습니다.");
         // eslint-disable-next-line no-restricted-globals
         window.location.replace("https://festiver.co/");
@@ -24,6 +37,7 @@ const Form = () => {
             <div className="FormContainer">
                 <div className="FormBack">
                     <form className="Form" id="form" onSubmit={handleSubmit}>
+                        {/*onSubmit={(e) => handleSubmit(e)} ?*/}
                         <h1 className="FormTitle">정보 입력</h1>
                         <hr className="FormHr"></hr>
                         <div className="InputContainer">
@@ -36,6 +50,7 @@ const Form = () => {
                                     required: true,
                                     minLength: 1,
                                 })}
+                                onChange={handleValue}
                             ></input>
                             <h3 className="InputIdx">휴대전화</h3>
                             <input
@@ -48,22 +63,17 @@ const Form = () => {
                                     minLength: 11,
                                     maxLength: 11,
                                 })}
+                                onChange={handleValue}
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
-                            {/*<Controller
-                                control={control}
-                                name="date"
-                                render={({ field: { onChange, date } }) => (*/}
                             <ReactDatePicker
-                                onChange={(date: Date) => setStartDate(date)}
+                                onChange={(date) => setStartDate(date)}
                                 selected={date}
                                 id="date"
                                 dateFormat="yyyy.MM.dd."
                                 maxDate={new Date()}
-                                //placeholderText="공연 날짜 선택"
+                                placeholderText="공연 날짜 선택"
                             />
-                            {/*)}
-                            />*/}
                         </div>
                     </form>
                 </div>
