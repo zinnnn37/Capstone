@@ -1,10 +1,8 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
 import ReactDatePicker from "react-datepicker";
 import "./Form.scss";
 
 const Form = () => {
-    const { register } = useForm();
     const [date, setStartDate] = useState(new Date());
 
     const [data, setInputs] = useState({
@@ -26,7 +24,18 @@ const Form = () => {
 
         data["date"] = e.target.date.value;
         console.log(data);
-
+        if (
+            window.confirm(
+                "id: " +
+                    data["id"] +
+                    "\n휴대전화: " +
+                    data["phone"] +
+                    "\n공연 날짜: " +
+                    data["date"] +
+                    "\n\n재입력은 불가능합니다. 제출하시겠습니까?"
+            ) === false
+        )
+            return;
         alert("제출되었습니다.");
         // eslint-disable-next-line no-restricted-globals
         window.location.replace("https://festiver.co/");
@@ -46,10 +55,6 @@ const Form = () => {
                                 className="Input"
                                 id="id"
                                 type="text"
-                                {...register("id", {
-                                    required: true,
-                                    minLength: 1,
-                                })}
                                 onChange={handleValue}
                             ></input>
                             <h3 className="InputIdx">휴대전화</h3>
@@ -58,11 +63,6 @@ const Form = () => {
                                 className="Input"
                                 id="phone"
                                 type="text"
-                                {...register("phone", {
-                                    required: true,
-                                    minLength: 11,
-                                    maxLength: 11,
-                                })}
                                 onChange={handleValue}
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
