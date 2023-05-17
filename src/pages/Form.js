@@ -24,6 +24,7 @@ const Form = () => {
 
         data["date"] = e.target.date.value;
         console.log(data);
+        console.log(JSON.stringify(data));
         if (
             window.confirm(
                 "id: " +
@@ -73,7 +74,7 @@ const Form = () => {
                                 dateFormat="yyyy.MM.dd."
                                 maxDate={new Date()}
                                 placeholderText="공연 날짜 선택"
-                                ignoreReadonly={true}
+                                readOnly={true}
                             />
                         </div>
                     </form>
