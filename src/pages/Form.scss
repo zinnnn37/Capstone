@@ -14,8 +14,8 @@ body {
 }
 
 .FormContainer {
-    width: 500px;
-    height: 100%;
+    width: 370px;
+    height: 600px;
 
     margin-left: auto;
     margin-right: auto;
@@ -29,10 +29,10 @@ body {
 }
 
 .FormBack {
-    width: 70%;
-    height: 70%;
+    width: 80%;
+    height: 80%;
 
-    margin-top: auto;
+    margin-top: 10%;
     margin-bottom: 5%;
     margin-left: auto;
     margin-right: auto;
@@ -50,8 +50,6 @@ body {
     font-size: 2em;
     font-weight: bold;
 
-    padding-top: 15%;
-
     text-align: center;
     justify-content: center;
 }
@@ -59,16 +57,15 @@ body {
 .FormHr {
     color: white;
     width: 90%;
-    margin-top: 5%;
     margin-bottom: auto;
 }
 
 .InputContainer {
     width: 70%;
-    height: 50%;
 
     margin-left: auto;
     margin-right: auto;
+    margin-top: 5%;
 
     align-items: center;
     justify-content: center;
@@ -78,20 +75,20 @@ body {
     width: 80%;
     height: 80%;
 
+    margin-top: 15%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20%;
 
     align-items: center;
     input {
         background: #a5a1d7;
         border: 1px solid #ffffff;
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: white;
 
         width: 84%;
 
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         padding-left: 0.7em;
         padding-right: 0.7em;
         padding-top: 0.3em;
@@ -119,10 +116,11 @@ body {
 }
 
 .Submit {
-    width: 70%;
-    height: 7%;
+    width: 80%;
+    height: 10%;
 
-    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
 
     background: #a5a1d7;
     border: 2px solid #ffffff;

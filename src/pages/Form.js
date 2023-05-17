@@ -73,6 +73,7 @@ const Form = () => {
                                 dateFormat="yyyy.MM.dd."
                                 maxDate={new Date()}
                                 placeholderText="공연 날짜 선택"
+                                ignoreReadonly={true}
                             />
                         </div>
                     </form>
