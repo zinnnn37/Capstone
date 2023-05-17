@@ -1,39 +1,29 @@
 import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import ReactDatePicker from "react-datepicker";
 import "./Form.scss";
 
-//interface IForm {
-//    name: string;
-//    id: string;
-//    Date: string;
-//    phone: string;
-//}
-
-//type FormValues = {
-//    ReactDatepicker: string,
-//};
-
 const Form = () => {
-    const { register, handleSubmit, control } = useForm();
+    const { register } = useForm();
+    const [date, setStartDate] = useState(new Date());
 
-    //const onSubmit = (event) => {
-    //    // 폼 전송 핸들러
-    //    event.preventDefault();
-    //    alert("전송 완료");
-    //};
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log({
+            id: e.target.id.value,
+            phone: e.target.phone.value,
+            date: JSON.stringify(e.target.date.value),
+        });
+        alert("제출되었습니다.");
+        // eslint-disable-next-line no-restricted-globals
+        window.location.replace("https://festiver.co/");
+    };
 
     return (
         <div className="background">
             <div className="FormContainer">
                 <div className="FormBack">
-                    <form
-                        className="Form"
-                        id="form"
-                        onSubmit={handleSubmit(
-                            (data) => alert(JSON.stringify(data)) // 데이터 서버로 전달하는 함수
-                        )}
-                    >
+                    <form className="Form" id="form" onSubmit={handleSubmit}>
                         <h1 className="FormTitle">정보 입력</h1>
                         <hr className="FormHr"></hr>
                         <div className="InputContainer">
@@ -60,19 +50,20 @@ const Form = () => {
                                 })}
                             ></input>
                             <h3 className="InputIdx">공연 날짜</h3>
-                            <Controller
+                            {/*<Controller
                                 control={control}
                                 name="date"
-                                render={({ field: { onChange, value } }) => (
-                                    <ReactDatePicker
-                                        onChange={onChange}
-                                        selected={value}
-                                        dateFormat="yyyy.MM.dd."
-                                        maxDate={new Date()}
-                                        placeholderText="공연 날짜 선택"
-                                    />
-                                )}
+                                render={({ field: { onChange, date } }) => (*/}
+                            <ReactDatePicker
+                                onChange={(date: Date) => setStartDate(date)}
+                                selected={date}
+                                id="date"
+                                dateFormat="yyyy.MM.dd."
+                                maxDate={new Date()}
+                                //placeholderText="공연 날짜 선택"
                             />
+                            {/*)}
+                            />*/}
                         </div>
                     </form>
                 </div>
