@@ -74,7 +74,7 @@ const Form = () => {
                                 dateFormat="yyyy.MM.dd."
                                 maxDate={new Date()}
                                 placeholderText="공연 날짜 선택"
-                                readOnly={true}
+                                onFocus={(e) => e.target.blur()}
                             />
                         </div>
                     </form>
