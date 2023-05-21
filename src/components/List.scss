@@ -1,5 +1,5 @@
 body {
-    background: white;
+    background: #f0f0f0;
 }
 
 .List {
@@ -18,18 +18,74 @@ body {
     align-items: center;
 }
 
-.List__container {
-    width: 100%;
-    height: 30%;
+.swiper {
+    width: 60%;
+    height: 85vh;
+
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 4%;
+
+    float: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 40px;
+}
+
+.swiper-slide {
+    width: 99%;
 
     border-radius: 40px;
 
-    background: #ffffff;
+    background: #f9f9f9;
     color: #000000;
     font-size: 1.5em;
-    justify-content: center;
     align-items: center;
     display: flex;
 
     box-shadow: 5px 5px 5px lightgray;
+}
+
+.GoodsImg {
+    height: 100%;
+
+    margin-right: 30px;
+
+    border-radius: 40px;
+
+    float: left;
+}
+
+.Goods {
+    padding-right: 40px;
+
+    width: 60%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.GoodsName {
+    margin-top: 70px;
+
+    width: 100%;
+    height: 80px;
+
+    font-size: 1.1em;
+}
+
+.GoodsPrice {
+    margin-top: 10px;
+    margin-bottom: auto;
+    margin-left: 10px;
+
+    width: 100%;
+    height: 50px;
+
+    font-size: 1em;
 }
